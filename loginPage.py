@@ -71,7 +71,9 @@ def main():
 		menu1 = ["logs","Apps","power"]
 		choice = st.selectbox("Menu",menu1)
 		if choice == "logs":
-			pass
+			st.dataframe(pd.DataFrame(
+				np.random.randn(50, 20),
+                		columns=('col %d' % i for i in range(20))))
 		elif choice  == "apps":
 			pass
 		elif choice == "power":
