@@ -71,13 +71,13 @@ def main():
 		menu1 = ["logs","Apps","power"]
 		choice = st.selectbox("Menu",menu1)
 		if choice == "logs":
-			st.dataframe(pd.DataFrame(
-				np.random.randn(50, 20),
-                		columns=('col %d' % i for i in range(20))))
+			output = os.popen(cmd).read()
+			st.dataframe(pd.DataFrame(np.random.randn(50, 20),columns=('col %d' % i for i in range(20))))
 		elif choice  == "apps":
-			pass
+			output = os.popen(cmd).read()
+			
 		elif choice == "power":
-			pass
+			output = os.popen(cmd).read()
 	elif choice == "Login":
 
 		st.subheader("Login Section")
